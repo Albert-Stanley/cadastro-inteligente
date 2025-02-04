@@ -103,7 +103,7 @@ const Cadastro: React.FC = () => {
 
   return (
     <div className="container">
-      <img src="/public/logo_modalGR.png" alt="Logo ModalGR" className="logo" />
+      <img src="/logo_modalGR.png" alt="Logo ModalGR" className="logo" />
       <h2>Cadastro de Pessoas</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="form-grid">
         {[
