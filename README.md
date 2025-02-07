@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# Cadastro de Pessoas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação React para cadastro de pessoas, desenvolvido como parte de um teste técnico. Ele permite que usuários insiram informações pessoais, valide o CPF, consulte o endereço via API do ViaCEP e visualize os dados cadastrados.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** com **TypeScript**
+- **React Router DOM** para navegação
+- **Zod** para validação de formulários
+- **API do ViaCEP** para preenchimento automático do endereço
+- **Vercel** para deploy
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📂 Estrutura do Projeto
+```
+📦 projeto-cadastro
+ ┣ 📂 public        # Arquivos estáticos (ex: logo.png)
+ ┣ 📂 src           # Código-fonte principal
+ ┃ ┣ 📂 components  # Componentes reutilizáveis
+ ┃ ┣ 📂 pages       # Páginas da aplicação
+ ┃ ┣ 📂 styles      # Estilos globais (se aplicável)
+ ┃ ┣ 📂 utils       # Funções auxiliares (ex: validação de CPF)
+ ┃ ┣ 📜 App.tsx     # Componente principal
+ ┃ ┣ 📜 main.tsx    # Ponto de entrada
+ ┣ 📜 package.json  # Dependências e scripts
+ ┣ 📜 tsconfig.json # Configuração do TypeScript
+ ┣ 📜 vercel.json   # Configuração do deploy (se aplicável)
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🎯 Funcionalidades
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+✅ **Cadastro de pessoas** com validação de dados
+✅ **Preenchimento automático de endereço** via CEP
+✅ **Validação de CPF**
+✅ **Cálculo automático da idade**
+✅ **Edição dos campos preenchidos pelo ViaCEP**
+✅ **Redirecionamento para exibição dos dados cadastrados**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 🔧 Como Rodar o Projeto Localmente
+
+1. **Clone o repositório**
+```sh
+git clone https://github.com/Albert-Stanley/cadastro-inteligente
+cd projeto-cadastro
 ```
+2. **Instale as dependências**
+```sh
+npm install
+```
+3. **Inicie o servidor de desenvolvimento**
+```sh
+npm run dev
+```
+4. **Acesse no navegador**
+```
+http://localhost:5173
+```
+
+## 🚀 Deploy na Vercel
+
+O projeto foi implantado na Vercel. Você pode acessá-lo em:
+🔗 [Link para o deploy](https://cadastro-inteligente.vercel.app)
+
