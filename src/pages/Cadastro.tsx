@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import axios from "axios";
 import "../styles/Cadastro.css";
 import { calcularIdade } from "../utils/CalcularIdade";
 import validarCPF from "../utils/ValidarCPF";
+import BuscarCEP from "../utils/ApiViaCep";
 
 const schema = z.object({
   nome: z
@@ -50,29 +50,6 @@ const Cadastro: React.FC = () => {
 
   const cep = watch("cep");
 
-  useEffect(() => {
-    const buscarCEP = async (cep: string) => {
-      if (cep.length === 9) {
-        try {
-          const response = await axios.get(
-            `https://viacep.com.br/ws/${cep.replace("-", "")}/json/`
-          );
-          if (!response.data.erro) {
-            setValue("logradouro", response.data.logradouro);
-            setValue("bairro", response.data.bairro);
-            setValue("cidade", response.data.localidade);
-            setValue("estado", response.data.uf);
-          } else {
-            alert("CEP não encontrado!");
-          }
-        } catch (error) {
-          console.error("Erro ao buscar CEP", error);
-        }
-      }
-    };
-    if (cep) buscarCEP(cep);
-  }, [cep, setValue]);
-
   const formatCPF = (cpf: string) =>
     cpf
       .replace(/\D/g, "")
@@ -106,6 +83,15 @@ const Cadastro: React.FC = () => {
       <img src="/logo_modalGR.png" alt="Logo ModalGR" className="logo" />
       <h2>Cadastro de Pessoas</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="form-grid">
+        <BuscarCEP
+          cep={cep}
+          onSuccess={(data) => {
+            setValue("logradouro", data.logradouro);
+            setValue("bairro", data.bairro);
+            setValue("cidade", data.cidade);
+            setValue("estado", data.estado);
+          }}
+        />
         {[
           { label: "Nome", name: "nome" },
           {
