@@ -13,17 +13,16 @@ Este projeto é uma aplicação React para cadastro de pessoas, desenvolvido com
 ## 📂 Estrutura do Projeto
 ```
 📦 projeto-cadastro
- ┣ 📂 public        # Arquivos estáticos (ex: logo.png)
+ ┣ 📂 public        # Arquivos estáticos 
  ┣ 📂 src           # Código-fonte principal
  ┃ ┣ 📂 components  # Componentes reutilizáveis
  ┃ ┣ 📂 pages       # Páginas da aplicação
- ┃ ┣ 📂 styles      # Estilos globais (se aplicável)
- ┃ ┣ 📂 utils       # Funções auxiliares (ex: validação de CPF)
+ ┃ ┣ 📂 styles      # Estilos globais 
+ ┃ ┣ 📂 utils       # Funções auxiliares 
  ┃ ┣ 📜 App.tsx     # Componente principal
  ┃ ┣ 📜 main.tsx    # Ponto de entrada
  ┣ 📜 package.json  # Dependências e scripts
  ┣ 📜 tsconfig.json # Configuração do TypeScript
- ┣ 📜 vercel.json   # Configuração do deploy (se aplicável)
 ```
 
 ## 🎯 Funcionalidades
