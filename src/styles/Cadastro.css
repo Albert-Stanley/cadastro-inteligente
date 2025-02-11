@@ -30,6 +30,7 @@ body {
   width: 100px;
   max-width: 10%;
   z-index: 10;
+  background-color: #2a2c31;
 }
 
 @media (max-width: 1600px) {
@@ -148,22 +149,22 @@ button {
   height: 40px;
   font-size: 16px;
   font-weight: bold;
-  color: white;
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: black;
+  background: linear-gradient(135deg, #00d2ff, #00a6b3);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 3px 8px rgba(0, 210, 255, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 button:hover {
-  background: linear-gradient(135deg, #0056b3, #004092);
-  box-shadow: 0 4px 10px rgba(0, 91, 187, 0.5);
-  transform: scale(1.02);
+  background: linear-gradient(135deg, #00c2e0, #009fa8);
+  box-shadow: 0 5px 12px rgba(0, 190, 220, 0.6);
+  transform: scale(1.05);
 }
 
 /* ======= Estilização da Tabela Responsiva ======= */

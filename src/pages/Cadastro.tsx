@@ -80,7 +80,11 @@ const Cadastro: React.FC = () => {
 
   return (
     <div className="container">
-      <img src="/logo_modalGR.png" alt="Logo ModalGR" className="logo" />
+      <img
+        src="/registration.gif"
+        alt="Gif Logo de Cadastro"
+        className="logo"
+      />
       <h2>Cadastro de Pessoas</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="form-grid">
         <BuscarCEP

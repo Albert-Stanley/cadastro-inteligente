@@ -37,7 +37,7 @@ const BuscarCEP: React.FC<BuscarCEPProps> = ({ cep, onSuccess }) => {
     };
 
     if (cep) buscarCEP();
-  }, [cep]);
+  }, [cep, onSuccess]);
 
   return null;
 };
