@@ -81,7 +81,7 @@ const Cadastro: React.FC = () => {
   return (
     <div className="container">
       <img
-        src="/registration.gif"
+        src="/logo-cadastro.png"
         alt="Gif Logo de Cadastro"
         className="logo"
       />
