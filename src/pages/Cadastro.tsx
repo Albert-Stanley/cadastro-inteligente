@@ -82,7 +82,7 @@ const Cadastro: React.FC = () => {
     <div className="container">
       <img
         src="/logo-cadastro.png"
-        alt="Gif Logo de Cadastro"
+        alt="Logo de Formulario com um lapis ao lado"
         className="logo"
       />
       <h2>Cadastro de Pessoas</h2>
