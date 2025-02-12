@@ -50,6 +50,8 @@ const Cadastro: React.FC = () => {
 
   const cep = watch("cep");
 
+  const formatNome = (nome: string) => nome.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ ]/g, "");
+
   const formatCPF = (cpf: string) =>
     cpf
       .replace(/\D/g, "")
@@ -97,7 +99,7 @@ const Cadastro: React.FC = () => {
           }}
         />
         {[
-          { label: "Nome", name: "nome" },
+          { label: "Nome", name: "nome", format: formatNome },
           {
             label: "CPF",
             name: "cpf",
